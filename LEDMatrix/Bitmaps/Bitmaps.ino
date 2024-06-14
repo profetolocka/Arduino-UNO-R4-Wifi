@@ -58,8 +58,6 @@ byte frame4 [8][12] = {
 
 void setup() {
 
-  pinMode (LED_BUILTIN, OUTPUT);
-
   Pantalla.begin();
 }
 

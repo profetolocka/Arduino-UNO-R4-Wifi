@@ -5,7 +5,7 @@
  A continuación se debe instanciar un objeto de la clase ArduinoLEDMatrix
  Cada cuadro o pantalla se puede definnir como un arreglo bidimensional de 8x12 bits
  El cuadro se muestra en el display empleando el método renderBitmap (cuadro, 8,12);
- Este método no es muy eficiente porque usa mucha memoria
+ Este método no es muy eficiente porque usa mucha memoria, la info de cada led requiere de 1 byte
 */
 
 #include "Arduino_LED_Matrix.h"
@@ -56,6 +56,17 @@ byte frame4 [8][12] = {
   {1,1,1,1,1,1,1,1,1,1,1,1},
 };
 
+uint8_t corazon [8][12] = {
+    {0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,1,1,0,1,1,0,0,0,0},
+    {0,0,1,0,0,0,0,0,1,0,0,0},
+    {0,0,1,0,0,0,0,0,1,0,0,0},
+    {0,0,0,1,0,0,0,1,0,0,0,0},
+    {0,0,0,0,1,0,1,0,0,0,0,0},
+    {0,0,0,0,0,1,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0},
+};
+
 void setup() {
 
   Pantalla.begin();
@@ -63,14 +74,9 @@ void setup() {
 
 void loop() {
 
-  Pantalla.renderBitmap (frame1, 8,12);
+  Pantalla.renderBitmap (corazon, 8,12);
   delay (500);
-  Pantalla.renderBitmap (frame2, 8,12);
-  delay (500);  
-  Pantalla.renderBitmap (frame3, 8,12);
-  delay (500);  
-  Pantalla.renderBitmap (frame4, 8,12);
-  delay (500);
+  
 
   
 }

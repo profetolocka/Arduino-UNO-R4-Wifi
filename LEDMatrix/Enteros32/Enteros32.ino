@@ -1,7 +1,10 @@
 /*
  Pruebas de la matriz led de la UNO R4 Wifi usando enteros de 32 bits
- Es una forma mas eficiente de almacenar la informacion de la matriz
- Para facilitar la conversión se puede usar esta página:
+
+ Es una forma mas eficiente de almacenar la informacion de la matriz ya que emplea solo
+ 3 enteros "largos" de 32 bits cada uno.
+
+ Para facilitar la conversión de bitmap a 3 enteros se puede usar esta página:
  https://www.manualdomaker.com/matrix/
  
 */

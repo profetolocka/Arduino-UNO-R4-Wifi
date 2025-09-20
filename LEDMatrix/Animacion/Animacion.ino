@@ -1,23 +1,14 @@
-/*
- Ejemplo de animacion.
- La secuencia de frames de la animacion fue hecha con la aplicacion LED Matrix Editor
- https://labs.arduino.cc/en/labs/led-matrix y guardada como "pelota.h"
-*/
-
-#include "Arduino_LED_Matrix.h"
-#include "pelota.h"
-
-ArduinoLEDMatrix pantalla;  //Instanciar objeto
-
-void setup() {
-
-  pantalla.begin ();
-  pantalla.loadSequence (pelota);
-  pantalla.play (true);
-
+// C++ code
+//
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
+void loop()
+{
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
 }

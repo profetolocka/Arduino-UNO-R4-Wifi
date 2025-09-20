@@ -1,14 +1,3 @@
-/*
- Pruebas de la matriz led de la UNO R4 Wifi usando Bitmaps
- En este ejemplo se usa el método renderBitmap con arreglos bidimensionales
-
- Primero se debe cargar la librería "Arduino_LED_Matrix.h"
- A continuación se debe instanciar un objeto de la clase ArduinoLEDMatrix
- Cada cuadro o pantalla se puede definir como un arreglo bidimensional de 8x12 bits
- El cuadro se muestra en el display empleando el método renderBitmap (cuadro, 8,12);
- Este método no es muy eficiente porque usa mucha memoria, la info de cada led requiere de 1 byte
-*/
-
 #include "Arduino_LED_Matrix.h"
 
 ArduinoLEDMatrix Pantalla;  //Instancia objeto
